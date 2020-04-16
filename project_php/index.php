@@ -1,3 +1,12 @@
+***************************************************************************************/
+*    Title: Boostrap Dual Login Form
+*    Author: kshiti06
+*    Date: n.d.
+*    Code version: Bootstrap 4.1.1
+*    Availability: https://bootsnipp.com/snippets/z8aQr#comments
+*
+***************************************************************************************/
+
  <?php
     include('process1.php');
     if(isset($_SESSION['login_user'])){
