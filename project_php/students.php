@@ -7,53 +7,7 @@
 
     ?>
 
-     <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "project";
 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$user_check = $_SESSION['login_user2'];
-$sqlq = "SELECT staff_ID FROM staff_user WHERE `staff_user`.`email` = ('$user_check')";
-
-$result = $conn->query($sqlq);
-
-
-    
-  while($row = $result->fetch_assoc()) {
-    
-        $test = $row["staff_ID"];
-
-
-    }
-
-    $sqlq = "SELECT email, forename, surname, supervisor_allocated FROM student_user WHERE supervisor_allocated = ('$test')";
-
-$result2 = $conn->query($sqlq);
-$row2 = $result2->fetch_assoc();
-   
-  if($row2["supervisor_allocated"] > 0) {
-   
-        $fname =  $row2["forename"];
-        $lname = $row2["surname"];
-        $email = $row2["email"];
-
-
-    }
-if($row2["supervisor_allocated"] == 0) {
-        $fname =  "forename";
-        $lname ="surname";
-        $email = "email";
-}
-$conn->close();
-
-?>
 
 
 
@@ -109,17 +63,55 @@ $conn->close();
 </thead>
            
 <?php
-while($row2 = $result2->fetch_assoc()){
-if ($result2->num_rows > 0) {
+    
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "project";
 
-    ?>
-    <tr>
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$user_check = $_SESSION['login_user2'];
+$sqlq = "SELECT staff_ID FROM staff_user WHERE `staff_user`.`email` = ('$user_check')";
+$result = $conn->query($sqlq);
+  while($row = $result->fetch_assoc()) {
+        $test = $row["staff_ID"];
+    }
+    if($test > 0){
+ $sqlq = "SELECT email, forename, surname, supervisor_allocated FROM student_user WHERE supervisor_allocated = ('$test')";
+$result2 = $conn->query($sqlq);
+while($row2 = $result2->fetch_assoc()) {
+        $fname =  $row2["forename"];
+        $lname = $row2["surname"];
+        $email = $row2["email"];    ?>
+         <tr>
      <td class="testt0" > <?php printf('<a style="color:white;" href="mailto:%s">', $row2['email'] ); ?><?php echo $row2['email'];?></a></td>
     <td  class="testt1"><?php echo $row2['forename']; ?></td>
     <td class="testt2"><?php echo $row2['surname']; ?></td>
   
 
     </tr>
+    <?php
+          
+    }}
+      if($test == 0){
+        $fname =  "forename";
+        $lname ="surname";
+        $email = "email";      
+}
+$conn->close();
+
+while($row2 = $result2->fetch_assoc()){
+if ($result2->num_rows > 0) {
+
+    ?>
+
+   
     <?php
 }} 
 if ($result2->num_rows == 0) {

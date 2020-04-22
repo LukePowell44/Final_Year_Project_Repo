@@ -21,7 +21,6 @@ CREATE TABLE Staff_user (
     password varchar(350),
 	area varchar(350),
 	FREQ int(255) NULL DEFAULT '0',
-	students_allocated varchar(350),
 	directory varchar(350),
 	PRIMARY KEY (Staff_ID)
 );
@@ -87,7 +86,7 @@ INSERT INTO Student_User (Email, forename, surname, Password)
 VALUES ('potter@students.lincoln.ac.uk', 'Harry', 'Potter', ('test123'));
 
 INSERT INTO Student_User (Email, forename, surname, Password)
-VALUES ('spongebob@students.lincoln.ac.uk', 'Spongebob', 'Sqaurepants', ('test123'));
+VALUES ('spongebob@students.lincoln.ac.uk', 'Spongebob', 'Squarepants', ('test123'));
 
 INSERT INTO Student_User (Email, forename, surname, Password)
 VALUES ('bloggs@students.lincoln.ac.uk', 'Joe', 'Bloggs', ('test123'));
@@ -114,37 +113,40 @@ INSERT INTO Student_User (Email, forename, surname, Password)
 VALUES ('stark@students.lincoln.ac.uk', 'Tony', 'Stark', ('test123'));
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, FREQ, area)
-VALUES ('wchristian@lincoln.ac.uk', 'Wayne', 'Christian', ('test123'), 'https://staff.lincoln.ac.uk/6813ec66-c785-4a8d-9089-57bffdb7e00c', '5', 'Web_Development,Virtual_Reality_(VR),');
+VALUES ('bbunny@lincoln.ac.uk', 'Buggs', 'Bunny', ('test123'), 'https://staff.lincoln.ac.uk/', '5', 'Web_Development,Virtual_Reality_(VR),');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, FREQ, area)
-VALUES ('kbachour@lincoln.ac.uk', 'Khaled', 'Bachour', ('test123'), 'https://staff.lincoln.ac.uk/d5823cb6-8053-4f12-9627-24fed0074489', '4', 'Human_Computer_Interaction_(HCI),');
+VALUES ('dduck@lincoln.ac.uk', 'Daffy', 'Duck', ('test123'), 'https://staff.lincoln.ac.uk/', '4', 'Human_Computer_Interaction_(HCI),');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, FREQ, area)
-VALUES ('cheadleand@lincoln.ac.uk', 'Chris', 'Headleand', ('test123'), 'https://staff.lincoln.ac.uk/daa59075-c37c-4a18-a529-ead1acfcf512', '2', 'Augmented_Reality_(AR),Game_Development,');
+VALUES ('tbird@lincoln.ac.uk', 'Tweety', 'Bird', ('test123'), 'https://staff.lincoln.ac.uk/', '2', 'Augmented_Reality_(AR),Game_Development,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, FREQ, area)
-VALUES ('defoster@lincoln.ac.uk', 'Derek', 'Foster', ('test123'), 'https://staff.lincoln.ac.uk/d49a8e50-b321-48b7-9c33-3ad880bd18d6', '1', 'Cloud_Computing,');
+VALUES ('mmouse@lincoln.ac.uk', 'Mickey', 'Mouse', ('test123'), 'https://staff.lincoln.ac.uk/', '1', 'Cloud_Computing,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, area)
-VALUES ('yjames@lincoln.ac.uk', 'Yvonne', 'James', ('test123'), 'https://staff.lincoln.ac.uk/15facb94-850f-494b-ba54-16dfef98c97d', 'Networking,');
+VALUES ('donduck@lincoln.ac.uk', 'Donald', 'Duck', ('test123'), 'https://staff.lincoln.ac.uk/', 'Networking,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, area)
-VALUES ('pcarlisle@lincoln.ac.uk', 'Philip', 'Carlisle', ('test123'), 'https://staff.lincoln.ac.uk/0e452623-423b-41f4-a9db-9dcc833131cc', 'Game_Development,');
+VALUES ('pdog@lincoln.ac.uk', 'Pluto', 'Dog', ('test123'), 'https://staff.lincoln.ac.uk/', 'Game_Development,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, FREQ, area)
-VALUES ('jholopainen@lincoln.ac.uk', 'Jussi', 'Holopainen', ('test123'), 'https://staff.lincoln.ac.uk/34c98bf4-8fea-411f-94e0-e11b6305487e', '5', 'Game_Development,');
+VALUES ('tcat@lincoln.ac.uk', 'Tom', 'Cat', ('test123'), 'https://staff.lincoln.ac.uk/', '5', 'Game_Development,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, area)
-VALUES ('sjiang@lincoln.ac.uk', 'Shouyong', 'Jiang', ('test123'), 'https://staff.lincoln.ac.uk/26b8d88a-9e1c-46e0-b3bb-9b45b4142daa', 'Machine_Learning,Big_Data,');
+VALUES ('sdoo@lincoln.ac.uk', 'Scooby', 'Doo', ('test123'), 'https://staff.lincoln.ac.uk/', 'Machine_Learning,Big_Data,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, area)
-VALUES ('myu@lincoln.ac.uk', 'Miao', 'Yu', ('test123'), 'https://staff.lincoln.ac.uk/36813a8e-0142-4342-9c17-f534a0a16cdd', 'Computer_Learning,Machine_Learning,Deep_Learning,');
+VALUES ('fflintstone@lincoln.ac.uk', 'Fred', 'Flintstone', ('test123'), 'https://staff.lincoln.ac.uk/', 'Computer_Learning,Machine_Learning,Deep_Learning,');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory)
-VALUES ('baldiri@lincoln.ac.uk', 'Bashir', 'Al-Diri', ('test123'), 'https://staff.lincoln.ac.uk/51763eb1-19eb-42b0-9781-c99ce9133b85');
+VALUES ('gramsey@lincoln.ac.uk', 'Gordon', 'Ramsey', ('test123'), 'https://staff.lincoln.ac.uk/');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory, FREQ)
-VALUES ('kjacques@lincoln.ac.uk', 'Kevin', 'Jacques', ('test123'), 'https://staff.lincoln.ac.uk/24c4fa4e-e572-4f3d-a77a-fa5631ca951a', '3');
+VALUES ('joliver@lincoln.ac.uk', 'Jamie', 'Oliver', ('test123'), 'https://staff.lincoln.ac.uk/', '3');
+
+INSERT INTO Staff_user (Email, forename, surname, Password, directory)
+VALUES ('phollywood@lincoln.ac.uk', 'Paul', 'Hollywood', ('test123'), 'https://staff.lincoln.ac.uk/');
 
 INSERT INTO Staff_user (Email, forename, surname, Password, directory)
 VALUES ('hcuayahuitl@lincoln.ac.uk', 'Heriberto', 'Cuayahuitl', ('test123'), 'https://staff.lincoln.ac.uk/6832ced4-f983-44ca-8bc7-36cde054bf0b');

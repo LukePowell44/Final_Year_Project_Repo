@@ -1,4 +1,13 @@
+
     <?php
+ /*      ***************************************************************************************
+*    Title: Flat user profile UI
+*    Author: maridlcrmn
+*    Date: 2015
+*    Code version: Bootstrap 3.2.0
+*    Availability: https://bootsnipp.com/snippets/xRMX
+*
+***************************************************************************************/
     include('session.php');
     if(!isset($_SESSION['login_user'])){
     header("location: index.php");
